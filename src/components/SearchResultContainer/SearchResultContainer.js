@@ -3,8 +3,6 @@ import SearchForm from "../SearchForm/SearchForm";
 import ResultList from "../ResultsList/ResultList";
 import API from "../../utils/API";
 
-console.log("hello");
-
 class SearchResultContainer extends Component {
   state = {
     search: "",
@@ -54,16 +52,14 @@ class SearchResultContainer extends Component {
     const name = e.target.name;
     const value = e.target.value;
     const search = this.handleInputChange.name;
-    console.log(search);
+
     this.setState({
       [name]: value,
     });
     this.filteredCharacters();
-    // console.log(search);
   };
   filteredCharacters() {
     const filteredResults = this.state.results.filter((character) => {
-      console.log(this.state.search);
       return (
         character.name.toLowerCase().includes(this.state.search) ||
         character.house.toLowerCase().includes(this.state.search)
@@ -82,18 +78,16 @@ class SearchResultContainer extends Component {
     this.setState({
       filteredResults: sorted,
     });
-    console.log(this.state);
   };
   sortBeta = (e) => {
     e.preventDefault();
-    console.log(this.state.filteredResults);
+
     const { filteredResults } = this.state;
     let newfilteredResults = filteredResults.reverse();
 
     this.setState({
       filteredResults: newfilteredResults,
     });
-    console.log(this.state);
   };
 
   render() {
