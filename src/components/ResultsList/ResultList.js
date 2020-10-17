@@ -8,10 +8,10 @@ function ResultList(props) {
       {props.results.map((r) => (
         <Card className="mb-3" key={r.key} style={{ width: "40rem" }}>
           <div className="row no-gutters">
-            <div className="col-md-4">
+            <div className="col-xl-4">
               <Card.Img variant="top" src={r.picture} />
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
               <Card.Body>
                 <h1>{r.name}</h1>
                 <h4>From {r.house} House</h4>
@@ -22,6 +22,7 @@ function ResultList(props) {
                 </Card.Text>
               </Card.Body>
             </div>
+            
           </div>
         </Card>
       ))}
