@@ -51,6 +51,6 @@ Input is welcome!
 
 ## Questions
 Link to this repo:  https://github.com/bigchsta62/directoryREACT
-Link to deployed app:  
+Link to deployed app:  https://guarded-sea-54427.herokuapp.com/
 
 Contact me:  bigchsta62@msn.com
